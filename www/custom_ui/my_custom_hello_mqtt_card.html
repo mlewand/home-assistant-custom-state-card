@@ -1,0 +1,34 @@
+<link rel="import" href="/static/home-assistant-polymer/bower_components/polymer/polymer.html">
+<link rel="import" href="/static/home-assistant-polymer/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="my_custom_hello_mqtt_card">
+  <template>
+
+    <div class='horizontal justified layout'>
+      This is an example text that
+      <em>should</em> appear as a card.
+    </div>
+  </template>
+</dom-module>
+
+<script>
+  Polymer( {
+    is: 'my_custom_hello_mqtt_card',
+
+    properties: {
+      hass: {
+        type: Object,
+      },
+
+      inDialog: {
+        type: Boolean,
+        value: false,
+      },
+
+      stateObj: {
+        type: Object,
+      },
+    },
+  } );
+
+</script>

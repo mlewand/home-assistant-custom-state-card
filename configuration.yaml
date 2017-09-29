@@ -1,0 +1,21 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Simple Docker Example
+  # customize:
+  #   hello_mqtt.last_message:
+  #     # custom_ui_state_card: my_custom_card
+  #     custom_ui_state_card: state-card-my_custom_card.html
+  customize_glob:
+    "*.*":
+      custom_ui_state_card: my_custom_hello_mqtt_card
+      state_card_mode: break-slider
+
+# Enables the frontend
+frontend:
+  extra_html_url:
+    - /local/custom_ui/my_custom_hello_mqtt_card.html
+
+hello_mqtt:
+
+http:
+  development: 1
