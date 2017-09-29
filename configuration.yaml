@@ -3,17 +3,15 @@ homeassistant:
   name: Simple Docker Example
   # customize:
   #   hello_mqtt.last_message:
-  #     # custom_ui_state_card: my_custom_card
-  #     custom_ui_state_card: state-card-my_custom_card.html
+  #     custom_ui_state_card: my-custom-hello-mqtt-card
   customize_glob:
     "*.*":
-      custom_ui_state_card: my_custom_hello_mqtt_card
-      state_card_mode: break-slider
+      custom_ui_state_card: my-custom-hello-mqtt-card
 
 # Enables the frontend
 frontend:
   extra_html_url:
-    - /local/custom_ui/my_custom_hello_mqtt_card.html
+    - /local/custom_ui/my-custom-hello-mqtt-card.html
 
 hello_mqtt:
 
